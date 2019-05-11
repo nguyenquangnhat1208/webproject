@@ -11,8 +11,8 @@ def index():
 
 @app.route('/products')
 def products():
-
-    return render_template('products.html')
+    allphone = mobile_collection.find()
+    return render_template('products.html',allphone = allphone)
 
 @app.route('/products/single/<id>')
 def single(id):
