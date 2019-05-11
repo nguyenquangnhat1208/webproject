@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from database import mobile_collection
+from models.database import mobile_collection
 from bson.objectid import ObjectId
 app = Flask(__name__)
 
