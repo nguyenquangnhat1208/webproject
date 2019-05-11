@@ -18,26 +18,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 		<!--fonts-->
         <!--form-css-->
-        <link href="../static/css/form.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/static/css/form.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     
     <!--coustom css-->
     
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
     <!--shop-kart-js-->
    
-    <script src="../static/js/simpleCart.min.js"></script>
+    <script src="/static/js/simpleCart.min.js"></script>
     <!--default-js-->
     
-    <script src="../static/js/jquery-2.1.4.min.js"></script>
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
     <!--bootstrap-js-->
     
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
 		<!--script-->
          <!-- FlexSlider -->
-            <script src="../static/js/imagezoom.js"></script>
-              <script defer src="../static/js/jquery.flexslider.js"></script>
-            <link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" />
+            <script src="/static/js/imagezoom.js"></script>
+              <script defer src="/static/js/jquery.flexslider.js"></script>
+            <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" />
 
             <script>
             // Can also be used with $(document).ready()
@@ -83,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <ul class="dropdown-menu">
                                             <li><a href="/products/filter/Iphone XS - XSmax">Iphone Xs - Xs max</a></li>
                                             <li><a href="/products/filter/Iphone X">Iphone X</a></li>
-                                            <li><a href="/products/filter/Iphone 7 - 8 - plus ">Iphone 7 - 8 - plus</a></li>
+                                            <li><a href="/products/filter/Iphone 7 - 8 - plus">Iphone 7 - 8 - plus</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -120,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sam Sung<b
                                                 class="caret"></b></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="/products/filter/Samsung S10">S10</a></li>
+                                            <li><a href="/products/filter/Samsung S10">S10 Plus</a></li>
                                             <li><a href="/products/filter/Note 9">Note 9</a></li>
                                             <li><a href="/products/filter/Samsung S9">S9 Plus</a></li>
                                         </ul>
@@ -150,7 +150,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <div class="products-gallery">
            <div class="container">
-            {% for phone in allphone %}
+            {% for phone in phone_list %}
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
                 <!-- normal -->
                 <div class="ih-item square effect3 bottom_to_top">
@@ -174,8 +174,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <a href="/products/single/{{phone._id}}">Quick view</a>
                 </div>
             </div>
-        {% endfor %}
-  
+            {% endfor %}
 						<script>
 							$(document).ready(function(){
 								$(".tab1 .single-bottom").hide();
