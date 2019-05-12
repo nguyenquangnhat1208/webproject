@@ -17,8 +17,9 @@ def products():
 @app.route('/products/single/<id>')
 def single(id):
     detail_mobile = mobile_collection.find_one({"_id" : ObjectId(id)})
+    allphone = mobile_collection.find()
     print(detail_mobile)
-    return render_template('single.html',detail_mobile=detail_mobile)
+    return render_template('single.html',detail_mobile=detail_mobile,allphone=allphone)
 
 @app.route('/products/filter/<type>')
 def detail8(type):
@@ -29,6 +30,9 @@ def detail8(type):
             phone_list.append(phone)
             print(phone)
     return render_template('filter.html',phone_list=phone_list)
+@app.route('/contact')
+def contact():
+    return render_template('infor.html')
     
     
 if __name__ == '__main__':
